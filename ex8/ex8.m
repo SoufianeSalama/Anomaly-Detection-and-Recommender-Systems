@@ -73,7 +73,7 @@ pause;
 %  probabilities given the estimated Gaussian distribution
 % 
 
-pval = multivariateGaussian(Xval, mu, sigma2);
+pval = multivariateGaussian(Xval, mu, sigma2)
 
 [epsilon F1] = selectThreshold(yval, pval);
 fprintf('Best epsilon found using cross-validation: %e\n', epsilon);
