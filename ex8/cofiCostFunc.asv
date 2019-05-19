@@ -42,18 +42,13 @@ alpha = 1;
 %
 
 
-J = (1/2) * sum(sum(  ( X *(transpose(Theta)).*R - Y).^2)) ;
+J = (1/2) * sum(sum(  ( X *(transpose(Theta)).*R - Y).^2)) + (lambda/2)*sum(sum(X.^2)) + (lambda/2)*sum(sum(Theta.^2));
 
 %Regularization COST
-J = J + (lambda/2)*sum(sum(X.^2)) + (lambda/2)*sum(sum(Theta.^2));
-
-
 X_grad = (((X*transpose(Theta)).*R - Y) * Theta);
 Theta_grad = (((X*transpose(Theta)).*R - Y)' * X);
 
 %Regularization GRADIENT
-X_grad = X_grad + lambda * X;
-Theta_grad = Theta_grad + lambda * Theta;
 
 % =============================================================
 
