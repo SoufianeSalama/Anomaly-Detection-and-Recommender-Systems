@@ -135,15 +135,31 @@ my_ratings(98) = 2;
 
 % We have selected a few movies we liked / did not like and the ratings we
 % gave are as follows:
-my_ratings(7) = 3;
-my_ratings(12)= 5;
-my_ratings(54) = 4;
-my_ratings(64)= 5;
-my_ratings(66)= 3;
-my_ratings(69) = 5;
-my_ratings(183) = 4;
-my_ratings(226) = 5;
-my_ratings(355)= 5;
+% my_ratings(7) = 3;
+% my_ratings(12)= 5;
+% my_ratings(54) = 4;
+% my_ratings(64)= 5;
+% my_ratings(66)= 3;
+% my_ratings(69) = 5;
+% my_ratings(183) = 4;
+% my_ratings(226) = 5;
+% my_ratings(355)= 5;
+
+my_ratings(1031) = 3;   % Lassie
+my_ratings(969)= 5;     % Winnie the Pooh and the Blustery Day 
+my_ratings(912) = 4;    % U.S. Marshalls
+my_ratings(693)= 5;     % Casino
+my_ratings(550)= 5;     % Die Hard: With a Vengeance
+my_ratings(467) = 3;    % Bronx Tale, A
+my_ratings(451) = 1;    % Grease
+my_ratings(449) = 2;    % Star Trek: The Motion Picture
+my_ratings(423)= 3;     % E.T. the Extra-Terrestrial
+my_ratings(257)= 3;     % Men in Black
+my_ratings(234)= 3;     % Jaws
+my_ratings(225) = 2;    % 101 Dalmatians
+my_ratings(405) = 5;    % Mission: Impossible
+my_ratings(226) = 3;    % Bean
+my_ratings(27)= 5;      % Bad Boys
 
 fprintf('\n\nNew user ratings:\n');
 for i = 1:length(my_ratings)
