@@ -99,7 +99,7 @@ ylabel('F1 Score');
 hold off;
 
 %%%% Vraag 2
-[epsilon2 F1 f1scoreMatrix epsilonMatrix] = selectThreshold2(yval, pval);
+[epsilon F1 f1scoreMatrix epsilonMatrix] = selectThreshold2(yval, pval);
 figure; hold on;
 plot(epsilonMatrix, f1scoreMatrix);
 title('1.3: F1 Score in func of epsilon 2');
@@ -115,16 +115,20 @@ title('1.3: Validation Set');
 xlabel('XVal: Feature 1');
 ylabel('XVal: Feature 2');
 
-[mu_val, sigma2_val] = estimateGaussian(Xval);
+[mu_v sigma2] = estimateGaussian(Xval);
 [X1,X2] = meshgrid(0:.5:35); 
-Z = multivariateGaussian([X1(:) X2(:)],mu_val,sigma2_val);
+Z = multivariateGaussian([X1(:) X2(:)],mu,sigma2);
 Z = reshape(Z,size(X1));
 
+plot(X(:, 1), X(:, 2),'bx');
+hold on;
 % Do not plot if there are infinities
 if (sum(isinf(Z)) == 0)
-    contour(X1, X2, Z, [epsilon2, epsilon2]);
+    contour(X1, X2, Z, 10.^(-20:3:0)');
 end
 hold off;
+hold off;
+
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
