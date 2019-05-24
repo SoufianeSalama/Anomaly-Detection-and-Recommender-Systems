@@ -42,7 +42,7 @@ alpha = 1;
 %
 
 
-J = (1/2) * sum(sum(  ( X *(transpose(Theta)).*R - Y).^2)) ;
+J = (1/2) * sum(sum(( X *(transpose(Theta)).*R - Y).^2)) ;
 
 %Regularization COST
 J = J + (lambda/2)*sum(sum(X.^2)) + (lambda/2)*sum(sum(Theta.^2));

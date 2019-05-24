@@ -53,11 +53,12 @@ pause
 %
 fprintf('Visualizing Gaussian fit.\n\n');
 
-%  Estimate my and sigma2
+%  Estimate mu and sigma2
 [mu sigma2] = estimateGaussian(X);
 
 %  Returns the density of the multivariate normal at each data point (row) 
 %  of X
+
 p = multivariateGaussian(X, mu, sigma2);
 
 %  Visualize the fit
@@ -85,7 +86,6 @@ fprintf('   (you should see a Best F1 value of  0.875000)\n\n');
 outliers = find(p < epsilon);
 
 %  Draw a red circle around those outliers
-
 hold on
 plot(X(outliers, 1), X(outliers, 2), 'ro', 'LineWidth', 2, 'MarkerSize', 10);
 hold off
@@ -106,6 +106,7 @@ title('1.3: F1 Score in func of epsilon 2');
 xlabel('Epsilon');
 ylabel('F1 Score');
 hold off;
+
 
 
 %%%% Vraag 3

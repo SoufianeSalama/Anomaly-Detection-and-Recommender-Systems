@@ -11,8 +11,9 @@ epsilonMatrix = [];
 bestEpsilon = 0;
 bestF1 = 0;
 F1 = 0;
-
+count = 0;
 stepsize = (max(pval) - min(pval)) / 1000;
+stepsize
 for epsilon = min(pval):stepsize:max(pval)
     
     % ====================== YOUR CODE HERE ======================
@@ -42,8 +43,9 @@ for epsilon = min(pval):stepsize:max(pval)
        bestF1 = F1;
        bestEpsilon = epsilon;
     end
+    count = count + 1 ;
 end
-
+count
 
 % figure; hold on;
 % plot(epsilonMatrix, f1scoreMatrix);
